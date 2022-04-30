@@ -10,7 +10,7 @@ const SongsData = () => {
 			audio: 'https://mp3.chillhop.com/serve.php/?mp3=32978',
 			color: ['#DACEB4', '#938384'],
 			id: uudiv4(),
-			active: false,
+			active: true,
 		},
 		{
 			name: 'Parasol',

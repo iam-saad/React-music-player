@@ -1,4 +1,5 @@
 import React from 'react';
+import { playAudio } from './util';
 
 const LibrarySong = ({
 	song,
@@ -11,13 +12,7 @@ const LibrarySong = ({
 	//Event Handlers
 	const songSelectHandler = () => {
 		setCurrentSong(song);
-		if (isPlaying) {
-			const playPromise = audioRef.current.play();
-			if (playPromise !== undefined)
-				playPromise.then((audio) => {
-					audioRef.current.play();
-				});
-		}
+		playAudio(isPlaying, audioRef);
 		//Toggle Active in Songs State
 		const newSongs = songs.map((state) => {
 			if (state.id === song.id) {

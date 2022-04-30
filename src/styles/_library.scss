@@ -2,15 +2,22 @@
 	display: flex;
 	flex-direction: column;
 	width: 25rem;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: scroll;
-  // padding: 1rem 0rem;
-  box-shadow: 5px 5px 50px rgb(201, 200, 200);
-  h1{
-    padding: 1rem 0rem;
-    text-align: center;
-  }
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: scroll;
+	box-shadow: 5px 5px 50px rgb(201, 200, 200);
+	transform: translateX(-100%);
+	transition: all 0.5s ease-in-out;
+	opacity: 0;
+	h1 {
+		padding: 1rem 0rem;
+		text-align: center;
+	}
+}
+
+.active {
+	transform: translateX(0%);
+	opacity: 1;
 }
