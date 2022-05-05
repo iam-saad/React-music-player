@@ -11,13 +11,20 @@
 	transform: translateX(-100%);
 	transition: all 0.5s ease-in-out;
 	opacity: 0;
+	background: white;
 	h1 {
-		padding: 1rem 0rem;
-		text-align: center;
+		padding: 1rem 2rem;
+		font-weight: 500;
 	}
 }
 
 .active {
 	transform: translateX(0%);
 	opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+	.library {
+		width: 100%;
+	}
 }

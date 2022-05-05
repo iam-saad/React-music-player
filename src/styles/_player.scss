@@ -11,9 +11,12 @@
 	width: 50%;
 	align-items: center;
 	justify-content: space-between;
+	padding: 2rem 0rem;
 	input {
 		width: 100%;
-		padding: 2rem 0rem;
+		-webkit-appearance: none;
+		background-color: transparent;
+		cursor: pointer;
 	}
 	p {
 		padding: 1rem;
@@ -28,5 +31,46 @@
 	width: 30%;
 	svg {
 		cursor: pointer;
+	}
+}
+
+input[type='range']:focus {
+	outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb,
+input[type='range']::-moz-range-thumb {
+	-webkit-appearance: none;
+	background: none;
+	border: none;
+	height: 16px;
+	width: 16px;
+}
+
+.track {
+	width: 100%;
+	background-color: aqua;
+	height: 1rem;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.5rem;
+}
+.track-animation {
+	background: #b3b3b3;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(0%);
+	pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+	.time-controls {
+		width: 85%;
+	}
+	.player-controls {
+		width: 70%;
 	}
 }
